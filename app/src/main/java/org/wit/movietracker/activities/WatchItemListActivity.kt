@@ -13,6 +13,7 @@ import org.wit.movietracker.main.MainApp
 import org.wit.movietracker.models.WatchItemModel
 
 
+
 class WatchItemListActivity : AppCompatActivity(), WatchItemListener{
 
     lateinit var app: MainApp
@@ -25,7 +26,8 @@ class WatchItemListActivity : AppCompatActivity(), WatchItemListener{
         //layout and populate for display
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = WatchItemAdapter(app.watchItems.findAll(), this)
+        //recyclerView.adapter = WatchItemAdapter(app.watchItems.findAll(), this)
+        loadWatchItems()
 
         //enable action bar and set title
         toolbarMain.title = title
@@ -33,6 +35,14 @@ class WatchItemListActivity : AppCompatActivity(), WatchItemListener{
     }
 
 
+    private fun loadWatchItems() {
+        showWatchItems(app.watchitems.findAll())
+    }
+
+    fun showWatchItems (watchitems: List<WatchItemModel>) {
+        recyclerView.adapter = WatchItemAdapter(watchitems, this)
+        recyclerView.adapter?.notifyDataSetChanged()
+    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
@@ -53,7 +63,11 @@ class WatchItemListActivity : AppCompatActivity(), WatchItemListener{
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         //recyclerView is a widget in activity_placemark_list.xml
         //lets recyclerView that there has been a change and updates the view
-        recyclerView.adapter?.notifyDataSetChanged()
+        //recyclerView.adapter?.notifyDataSetChanged()
+        loadWatchItems()
         super.onActivityResult(requestCode, resultCode, data)
     }
+
+
+
 }

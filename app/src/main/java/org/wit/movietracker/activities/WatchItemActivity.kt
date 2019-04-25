@@ -2,6 +2,7 @@ package org.wit.movietracker.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.system.Os.remove
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -50,10 +51,10 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
             }
             else {
                 if(edit){
-                    app.watchItems.update(watchItem.copy())
+                    app.watchitems.update(watchItem.copy())
                 }
                 else{
-                    app.watchItems.create(watchItem.copy())
+                    app.watchitems.create(watchItem.copy())
                 }
 
                 info("Add Button Pressed. name: ${watchItem.title}")
@@ -63,7 +64,7 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
 
             btnRemove.setOnClickListener{
 
-                app.watchItems.remove(watchItem)
+                app.watchitems.remove(watchItem)
                 setResult(AppCompatActivity.RESULT_OK)
                 finish()
             }
@@ -84,8 +85,8 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.item_cancel-> finish()
+           // R.id.item_delete-> remove()
         }
-
         return super.onOptionsItemSelected(item)
     }
 }
