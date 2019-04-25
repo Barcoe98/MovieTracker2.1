@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">MovieTrackerV2.1</string>
+    <string name="app_name">watchitem</string>
+    <string name="button_addWatchitem">Add Watch Item</string>
+    <string name="button_removeWatchitem">remove Watch Item</string>
+
+    <string name="hint_watchitemTitle">Watch Item Title</string>
+    <string name="hint_watchitemDescription">Watch Item Description</string>
+
+    <string name="menu_addWatchitem">Add</string>
+    <string name="menu_cancelWatchitem">Cancel</string>
+    <string name="menu_delete_watchitem">Delete</string>
+
+    <string name="enter_watchitem_title">Please Enter A Title</string>
+    <string name="enter_watchitem_desc">Please Enter A Description</string>
+
+    <string name="save_watchitem">Save Watch Item</string>
+
 </resources>
