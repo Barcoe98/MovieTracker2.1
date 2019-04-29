@@ -13,7 +13,8 @@ interface WatchItemListener {
 }
 
 class WatchItemAdapter constructor(private var watchItems: List<WatchItemModel>,
-                                   private val listener: WatchItemListener) : RecyclerView.Adapter<WatchItemAdapter.MainHolder>() {
+                                   private val listener: WatchItemListener)
+    : RecyclerView.Adapter<WatchItemAdapter.MainHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
         return MainHolder(LayoutInflater.from(parent?.context).inflate(R.layout.card_watchitem, parent, false))

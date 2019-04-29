@@ -6,25 +6,35 @@ import android.system.Os.remove
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.new_watchitem.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
+import org.jetbrains.anko.startActivityForResult
 import org.jetbrains.anko.toast
 import org.wit.movietracker.R
 import org.wit.movietracker.main.MainApp
 import org.wit.movietracker.models.WatchItemModel
+
 
 class WatchItemActivity : AppCompatActivity(), AnkoLogger {
 
     var watchItem = WatchItemModel()
     lateinit var app: MainApp
     var edit = false
+    //lateinit var mDatabase: DatabaseReference
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.new_watchitem)
         app = application as MainApp
         btnRemove.visibility = View.INVISIBLE
+       // item_delete.visibility = View.INVISIBLE
+
+       // mDatabase = FirebaseDatabase.getInstance().reference
+
 
         if (intent.hasExtra("watchItem_edit"))
         {
@@ -36,6 +46,7 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
             watchitemTitle.setText(watchItem.title)
             watchitemDesc.setText(watchItem.description)
             btnAdd.setText(R.string.save_watchitem)
+
         }
 
         btnAdd.setOnClickListener {
@@ -56,20 +67,19 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
                 else{
                     app.watchitems.create(watchItem.copy())
                 }
-
                 info("Add Button Pressed. name: ${watchItem.title}")
                 setResult(AppCompatActivity.RESULT_OK)
                 finish()
             }
 
+            /*
             btnRemove.setOnClickListener{
-
                 app.watchitems.remove(watchItem)
                 setResult(AppCompatActivity.RESULT_OK)
                 finish()
             }
+            */
         }
-
         //Add action bar and set title
         //toolbarAdd.title = title
         setSupportActionBar(toolbarAdd)
@@ -82,11 +92,28 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
     }
 
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
-            R.id.item_cancel-> finish()
-           // R.id.item_delete-> remove()
+
+override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    when (item?.itemId) {
+        R.id.item_delete -> {
+            app.watchitems.remove(watchItem)
+            finish()
         }
-        return super.onOptionsItemSelected(item)
+        R.id.item_cancel -> {
+            finish()
+        }
     }
+    return super.onOptionsItemSelected(item)
+}
+
+
+/*
+    private fun saveWatchitem(){
+        val ref = FirebaseDatabase.getInstance().getReference("WatchItems")
+        val  watchitemId = ref.push().key
+        ref.child(watchitemId).setValue(watchItem)
+    }
+    */
+
+
 }
