@@ -3,14 +3,14 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-            android:id="@+id/item_addWatchItem"
+            android:id="@+id/item_addWatchedMovie"
             android:icon="@android:drawable/ic_menu_add"
             android:title="@string/menu_addWatchitem"
             app:showAsAction="always"/>
-
     <item
-            android:id="@+id/item_watchedList"
+            android:id="@+id/item_watchList"
             android:icon="@android:drawable/ic_menu_sort_by_size"
             android:title="@string/menu_addWatchitem"
             app:showAsAction="always"/>
+
 </menu>

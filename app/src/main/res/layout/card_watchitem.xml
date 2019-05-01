@@ -16,13 +16,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:text="Watch Item Title"/>
 
         <TextView
                 android:id="@+id/watchitemDescList"
                 android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/watchitemTitleList"/>
+                android:layout_below="@id/watchitemTitleList"
+                android:text="Watch Item Desc"/>
+        <TextView
+                android:id="@+id/watchitemTimeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:layout_alignBaseline="@id/watchitemDescList"
+                android:layout_marginLeft="330dp"/>
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

@@ -44,6 +44,7 @@ class WatchItemJSONStore : WatchItemStore, AnkoLogger {
         if (foundWatchitem != null) {
             foundWatchitem.title = watchitem.title
             foundWatchitem.description = watchitem.description
+            foundWatchitem.time = watchitem.time
             logAll()
         }
     }

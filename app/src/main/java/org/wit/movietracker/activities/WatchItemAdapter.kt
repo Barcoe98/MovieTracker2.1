@@ -34,6 +34,7 @@ class WatchItemAdapter constructor(private var watchItems: List<WatchItemModel>,
         fun bind(watchItem: WatchItemModel,  listener : WatchItemListener) {
             itemView.watchitemTitleList.text= watchItem.title
             itemView.watchitemDescList.text = watchItem.description
+            itemView.watchitemTimeList.text = watchItem.time
             itemView.setOnClickListener { listener.onWatchItemClick(watchItem) }
         }
     }

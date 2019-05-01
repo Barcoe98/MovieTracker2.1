@@ -12,6 +12,11 @@
             android:theme="@style/AppTheme">
         <activity android:name=".activities.WatchItemActivity">
         </activity>
+        <activity android:name=".activities.WatchedMovieActivity">
+        </activity>
+        <activity android:name=".activities.WatchedMovieListActivity">
+        </activity>
+
         <activity android:name=".activities.WatchItemListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+    </application>
 </manifest>

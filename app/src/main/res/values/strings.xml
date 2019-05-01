@@ -1,10 +1,12 @@
 <resources>
-    <string name="app_name">watchitem</string>
+    <string name="app_name">MovieTracker</string>
+
     <string name="button_addWatchitem">Add Watch Item</string>
     <string name="button_removeWatchitem">remove Watch Item</string>
 
     <string name="hint_watchitemTitle">Watch Item Title</string>
     <string name="hint_watchitemDescription">Watch Item Description</string>
+    <string name="hint_watchitemTime">Watch Item Time</string>
 
     <string name="menu_addWatchitem">Add</string>
     <string name="menu_cancelWatchitem">Cancel</string>
@@ -12,7 +14,22 @@
 
     <string name="enter_watchitem_title">Please Enter A Title</string>
     <string name="enter_watchitem_desc">Please Enter A Description</string>
+    <string name="enter_watchitem_time">Please Enter A Time</string>
 
     <string name="save_watchitem">Save Watch Item</string>
+
+
+    <string name="hint_watchedTitle">Movie Title</string>
+    <string name="hint_watchedComment">Movie Comment</string>
+    <string name="hint_watchedRating">Movie Rating</string>
+
+    <string name="button_addWatchedMovie">Add To Watched Movies</string>
+    <string name="menu_addToWatched">Add</string>
+    <string name="menu_addWatched">Add</string>
+
+
+    <string name="save_watchedMovie">Save Watched Movie</string>
+
+
 
 </resources>
