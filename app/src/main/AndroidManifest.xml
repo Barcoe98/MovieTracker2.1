@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="org.wit.movietracker">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
             android:name="org.wit.movietracker.main.MainApp"
             android:allowBackup="true"
@@ -15,6 +17,8 @@
         <activity android:name=".activities.WatchedMovieActivity">
         </activity>
         <activity android:name=".activities.WatchedMovieListActivity">
+        </activity>
+        <activity android:name=".activities.MovieListActivity">
         </activity>
         <activity android:name=".activities.WatchItemListActivity">
         </activity>

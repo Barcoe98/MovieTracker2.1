@@ -14,7 +14,7 @@ class HomeActivity : AppCompatActivity(), AnkoLogger {
         setContentView(R.layout.home_screen)
 
         btnMovies.setOnClickListener{
-            startActivityForResult<WatchedMovieActivity>(0)
+            startActivityForResult<MovieListActivity>(0)
         }
 
         btnWatchList.setOnClickListener{

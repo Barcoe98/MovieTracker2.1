@@ -51,6 +51,10 @@
     <string name ="appBanner">Welcome to My Movie Tracker</string>
 
 
+    /*movie Strings*/
+    <string name ="menu_cancelMovie">Cancel</string>
+
+
 
 
 
