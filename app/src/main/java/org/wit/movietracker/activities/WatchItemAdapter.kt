@@ -27,8 +27,6 @@ class WatchItemAdapter constructor(private var watchItems: List<WatchItemModel>,
 
     override fun getItemCount(): Int = watchItems.size
 
-
-
     class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(watchItem: WatchItemModel,  listener : WatchItemListener) {

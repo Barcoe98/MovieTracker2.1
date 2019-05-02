@@ -52,9 +52,6 @@ class WatchItemListActivity : AppCompatActivity(), WatchItemListener{
             R.id.item_addWatchItem -> {
                 startActivityForResult<WatchItemActivity>(0)
             }
-            R.id.item_watchedList -> {
-                startActivityForResult<WatchedMovieListActivity>(0)
-            }
         }
         return super.onOptionsItemSelected(item)
     }

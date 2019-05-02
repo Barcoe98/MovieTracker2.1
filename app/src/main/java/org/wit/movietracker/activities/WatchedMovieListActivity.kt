@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.*
 import kotlinx.android.synthetic.main.watchedmovie_list.*
-import kotlinx.android.synthetic.main.watchitem_list.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivityForResult
 import org.wit.movietracker.R
@@ -25,7 +24,6 @@ class WatchedMovieListActivity : AppCompatActivity(), WatchedMovieListener{
         //layout and populate for display
         val layoutManager = LinearLayoutManager(this)
         recyclerViewWatched.layoutManager = layoutManager
-        //recyclerView.adapter = WatchItemAdapter(app.watchItems.findAll(), this)
         loadWatchedMovies()
 
         //enable action bar and set title
@@ -49,9 +47,6 @@ class WatchedMovieListActivity : AppCompatActivity(), WatchedMovieListener{
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
-            R.id.item_watchList -> {
-                startActivityForResult<WatchItemListActivity>(0)
-            }
             R.id.item_addWatchedMovie -> {
                 startActivityForResult<WatchedMovieActivity>(0)
             }

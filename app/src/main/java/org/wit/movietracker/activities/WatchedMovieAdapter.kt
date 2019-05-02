@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.card_watchedmovie.view.*
-import kotlinx.android.synthetic.main.card_watchitem.view.*
 import org.wit.movietracker.R
-import org.wit.movietracker.models.WatchItemModel
 import org.wit.movietracker.models.WatchedMovieModel
 
 interface WatchedMovieListener {
@@ -34,7 +32,7 @@ class WatchedMovieAdapter constructor(private var watchedMovies: List<WatchedMov
         fun bind(watchedMovie: WatchedMovieModel,  listener : WatchedMovieListener) {
           itemView.watchedMovieTitleList.text = watchedMovie.watchedTitle
             itemView.watchedMovieCommentList.text = watchedMovie.watchedComment
-           itemView.watchedMovieRatingList.text = watchedMovie.watchedComment
+           itemView.watchedMovieRatingList.text = watchedMovie.watchedRating
             itemView.setOnClickListener { listener.onWatchedMovieClick(watchedMovie) }
         }
     }

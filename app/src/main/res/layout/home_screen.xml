@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="org.wit.movietracker.activities.WatchItemActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                <TextView
+                        android:text="@string/appBanner"
+                        android:textSize="26dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="20dp"
+                        android:padding="8dp"
+                        android:layout_height="wrap_content"
+                        tools:layout_editor_absoluteY="107dp"
+                        tools:layout_editor_absoluteX="37dp"
+                        android:id="@+id/banner"
+                />
+                <TextView
+                        android:text="@string/appDesc"
+                        android:textSize="16dp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:layout_editor_absoluteY="164dp"
+                        tools:layout_editor_absoluteX="0dp"
+                        android:padding="8dp"
+                        android:id="@+id/about"/>
+
+                <Button
+                        android:text="@string/home_movies"
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/btnMovies"/>
+                <Button
+                        android:text="@string/home_watchlist"
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:id="@+id/btnWatchList"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:background="@color/colorAccent"/>
+
+                <Button
+                        android:text="@string/home_watchedMovies"
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="40dp"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/btnWatchedMovie"/>
+
+            </LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

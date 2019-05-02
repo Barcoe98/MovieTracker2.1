@@ -8,18 +8,10 @@
         android:title="@string/menu_delete_watchitem"
         app:showAsAction="always"/>
 
-    <item
-            android:id="@+id/item_addToWatched"
-            android:icon="@android:drawable/ic_menu_add"
-            android:title="@string/menu_addToWatched"
-            app:showAsAction="always"/>
 <item
         android:id="@+id/item_cancelWatchItem"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
         android:title="@string/menu_cancelWatchitem"
         app:showAsAction="always"/>
-
-
-
 
 </menu>

@@ -59,7 +59,7 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
         btnAddWatchedMovie.setOnClickListener{
 
             startActivityForResult<WatchedMovieActivity>(0)
-
+            app.watchitems.remove(watchItem)
         }
 
         btnAddWatchItem.setOnClickListener {
@@ -107,9 +107,6 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
         }
         R.id.item_cancelWatchItem -> {
             finish()
-        }
-            R.id.item_addToWatched -> {
-            startActivityForResult<WatchedMovieActivity>(0)
         }
     }
     return super.onOptionsItemSelected(item)

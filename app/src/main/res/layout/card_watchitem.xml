@@ -16,13 +16,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:textSize="30sp"
+                android:textSize="20sp"
                 android:text="Watch Item Title"/>
 
         <TextView
                 android:id="@+id/watchitemDescList"
                 android:layout_width="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/watchitemTitleList"
                 android:text="Watch Item Desc"/>
