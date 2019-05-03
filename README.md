@@ -9,9 +9,9 @@ An movie tracker app, where you can store movie you are currently watching, movi
 
 ## Contributing
 
-*https://tutorialwing.com/android-ratingbar-using-kotlin-with-example/
-*https://www.youtube.com/watch?v=F9e7qvubo8Y
-*https://www.themoviedb.org/documentation/api?language=en-US
+* https://tutorialwing.com/android-ratingbar-using-kotlin-with-example/
+* https://www.youtube.com/watch?v=F9e7qvubo8Y
+* https://www.themoviedb.org/documentation/api?language=en-US
 
 ## Versioning
 
