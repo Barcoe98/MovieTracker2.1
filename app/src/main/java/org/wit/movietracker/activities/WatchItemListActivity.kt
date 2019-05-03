@@ -1,3 +1,8 @@
+/*
+activity for watchitem_list.xml
+
+ */
+
 package org.wit.movietracker.activities
 
 import android.content.Intent
@@ -24,7 +29,8 @@ class WatchItemListActivity : AppCompatActivity(), WatchItemListener{
         //layout and populate for display
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        //recyclerView.adapter = WatchItemAdapter(app.watchItems.findAll(), this)
+
+        //populates display with watchItems
         loadWatchItems()
 
         //enable action bar and set title
@@ -32,23 +38,27 @@ class WatchItemListActivity : AppCompatActivity(), WatchItemListener{
         setSupportActionBar(toolbarWatchItem)
     }
 
-
+    // grabs all watchItems and populates to recyclerview
     private fun loadWatchItems() {
         showWatchItems(app.watchitems.findAll())
     }
 
-    fun showWatchItems (watchitems: List<WatchItemModel>) {
+    // populates recycler view with watchitem Model
+    private fun showWatchItems (watchitems: List<WatchItemModel>) {
         recyclerView.adapter = WatchItemAdapter(watchitems, this)
         recyclerView.adapter?.notifyDataSetChanged()
     }
 
+    //loads screen with menu_main
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
+    //handles clicks on menu_main
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+            //when icon clicked WatchItemActvity is started
             R.id.item_addWatchItem -> {
                 startActivityForResult<WatchItemActivity>(0)
             }
@@ -56,14 +66,13 @@ class WatchItemListActivity : AppCompatActivity(), WatchItemListener{
         return super.onOptionsItemSelected(item)
     }
 
+    //when watchItem is clicked will load up WatchItemActivity and allowuser to edit selected watchItem
     override fun onWatchItemClick(watchItem: WatchItemModel) {
         startActivityForResult(intentFor<WatchItemActivity>().putExtra("watchItem_edit", watchItem), 0)
     }
 
+    //reloads page when item added/deleted or edited
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        //recyclerView is a widget in activity_placemark_list.xml
-        //lets recyclerView that there has been a change and updates the view
-        //recyclerView.adapter?.notifyDataSetChanged()
         loadWatchItems()
         super.onActivityResult(requestCode, resultCode, data)
     }

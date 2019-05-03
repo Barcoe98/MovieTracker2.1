@@ -30,9 +30,10 @@ class WatchedMovieAdapter constructor(private var watchedMovies: List<WatchedMov
     class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(watchedMovie: WatchedMovieModel,  listener : WatchedMovieListener) {
-          itemView.watchedMovieTitleList.text = watchedMovie.watchedTitle
+            //binds card attr to attribute  of model
+            itemView.watchedMovieTitleList.text = watchedMovie.watchedTitle
             itemView.watchedMovieCommentList.text = watchedMovie.watchedComment
-           itemView.watchedMovieRatingList.text = watchedMovie.watchedRating
+            itemView.watchedMovieRatingList.text = watchedMovie.watchedRating
             itemView.setOnClickListener { listener.onWatchedMovieClick(watchedMovie) }
         }
     }

@@ -3,9 +3,20 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-            android:id="@+id/item_cancelMovie"
-            android:title="@string/menu_cancelMovie"
-            android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:id="@+id/item_cancelMovie"
+        android:title="@string/menu_cancelMovie"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        app:showAsAction="always"/>
+
+    <item
+            android:id="@+id/item_reloadMovies"
+            android:title="@string/menu_reloadMovies"
+            app:showAsAction="always"/>
+
+    <item
+            android:id="@+id/item_backMovie"
+            android:title="@string/menu_back"
+            android:icon="@android:drawable/ic_menu_revert"
             app:showAsAction="always"/>
 
 </menu>

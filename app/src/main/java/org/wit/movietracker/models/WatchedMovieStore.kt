@@ -6,4 +6,6 @@ interface WatchedMovieStore {
     fun create(watchedItem: WatchedMovieModel)
     fun update(watchedItem: WatchedMovieModel)
     fun remove(watchedItem: WatchedMovieModel)
+    fun length(watchedItem: WatchedMovieModel)
+
 }

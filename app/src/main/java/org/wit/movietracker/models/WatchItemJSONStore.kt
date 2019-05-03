@@ -33,20 +33,22 @@ class WatchItemJSONStore : WatchItemStore, AnkoLogger {
         return watchitems
     }
 
+    //creates a watchitem when used, said watch item is given an id and then
     override fun create(watchitem: WatchItemModel) {
         watchitem.id = generateRandomId()
         watchitems.add(watchitem)
         serialize()
     }
 
+    //updates watchItem
     override fun update(watchitem: WatchItemModel) {
         var foundWatchitem: WatchItemModel? = watchitems.find { p -> p.id == watchitem.id }
         if (foundWatchitem != null) {
             foundWatchitem.title = watchitem.title
             foundWatchitem.description = watchitem.description
             foundWatchitem.time = watchitem.time
-            logAll()
         }
+        serialize()
     }
 
     override fun remove(watchitem: WatchItemModel) {

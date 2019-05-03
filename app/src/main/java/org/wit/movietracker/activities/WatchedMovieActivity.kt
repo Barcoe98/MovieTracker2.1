@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import kotlinx.android.synthetic.main.activity_statistic.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
@@ -22,6 +23,7 @@ class WatchedMovieActivity : AppCompatActivity(), AnkoLogger {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.new_watchedmovie)
+
         app = application as MainApp
 
         if (intent.hasExtra("watchedMovie_edit"))
@@ -58,6 +60,7 @@ class WatchedMovieActivity : AppCompatActivity(), AnkoLogger {
                 }
                 else{
                     app.watchedMovies.create(watchedMovie.copy())
+                   // Counter.counter + 1
                 }
                 info("Add Button Pressed. name: ${watchedMovie.watchedTitle}")
                 setResult(AppCompatActivity.RESULT_OK)
@@ -71,21 +74,22 @@ class WatchedMovieActivity : AppCompatActivity(), AnkoLogger {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_watchedmovie, menu)
+        if (edit && menu != null) menu.getItem(0).isVisible = true
         return super.onCreateOptionsMenu(menu)
     }
 
-
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+            //when icon is clicked deleted selected Watched Movie
             R.id.item_deleteWatched -> {
                 app.watchedMovies.remove(watchedMovie)
                 finish()
             }
+            //when icon is clicked finishes activity and returns to previous screen
             R.id.item_cancelWatched -> {
                 finish()
             }
         }
         return super.onOptionsItemSelected(item)
     }
-
 }

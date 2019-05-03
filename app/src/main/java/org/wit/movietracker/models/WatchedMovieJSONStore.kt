@@ -52,6 +52,10 @@ class WatchedMovieJSONStore : WatchedMovieStore, AnkoLogger {
     override fun remove(watchedMovie: WatchedMovieModel) {
         watchedMovies.remove(watchedMovie)
         serialize()
+    }
+
+    override fun length(watchedMovie: WatchedMovieModel){
+        watchedMovies.size
 
     }
 

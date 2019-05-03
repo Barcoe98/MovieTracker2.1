@@ -11,7 +11,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/appBarLayout"
+                android:fillViewport="true">
 
             <LinearLayout
                     android:layout_width="match_parent"
@@ -24,7 +28,6 @@
                         android:textSize="26dp"
                         android:gravity="center"
                         android:layout_width="wrap_content"
-                        android:layout_margin="20dp"
                         android:padding="8dp"
                         android:layout_height="wrap_content"
                         tools:layout_editor_absoluteY="107dp"
@@ -37,39 +40,53 @@
                         android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        tools:layout_editor_absoluteY="164dp"
-                        tools:layout_editor_absoluteX="0dp"
                         android:padding="8dp"
                         android:id="@+id/about"/>
 
+                <TextView android:layout_width="140dp"
+                          android:layout_height="40dp"
+                          android:id="@+id/watchedMoviesCount"/>
+
                 <Button
                         android:text="@string/home_movies"
-                        android:layout_width="250dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="40dp"
+                        android:layout_width="220dp"
+                        android:layout_height="80dp"
                         android:background="@color/colorAccent"
                         android:textColor="@color/colorPrimaryDark"
+                        android:layout_marginTop="30dp"
                         android:id="@+id/btnMovies"/>
                 <Button
                         android:text="@string/home_watchlist"
-                        android:layout_width="250dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="40dp"
+                        android:layout_width="220dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="30dp"
                         android:gravity="center"
                         android:id="@+id/btnWatchList"
                         android:textColor="@color/colorPrimaryDark"
                         android:background="@color/colorAccent"/>
 
                 <Button
+                        android:text="@string/home_Stats"
+                        android:layout_width="220dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/btnStatistics"/>
+
+                <Button
                         android:text="@string/home_watchedMovies"
-                        android:layout_width="250dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="40dp"
-                        android:layout_marginBottom="40dp"
+                        android:layout_width="220dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+
                         android:background="@color/colorAccent"
                         android:textColor="@color/colorPrimaryDark"
                         android:id="@+id/btnWatchedMovie"/>
 
+
             </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

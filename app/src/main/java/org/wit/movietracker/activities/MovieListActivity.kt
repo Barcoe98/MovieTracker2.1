@@ -22,11 +22,8 @@ import retrofit2.Response
 class MovieListActivity  : AppCompatActivity() {
 
     lateinit var app: MainApp
-
-    val TAG: String = MainApp::class.java.simpleName
     val API_KEY: String = "0306b1ac6480f6ec8ea92d46a2d7d2f7"
     lateinit var myMovieAdapter: MovieAdapter
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,8 +69,11 @@ class MovieListActivity  : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.item_cancelMovie -> {
-            finish()
+                finish()
           }
+            R.id.item_backMovie -> {
+                finish()
+            }
         }
         return super.onOptionsItemSelected(item)
     }

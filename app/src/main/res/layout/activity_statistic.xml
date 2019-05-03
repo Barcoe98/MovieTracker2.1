@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="org.wit.movietracker.activities.StatisticActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+            <TextView
+                    android:text=" My Movie Statistics"
+                    android:textSize="40dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_margin="80dp"
+                    android:background="@color/colorAccent"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/statsTitle"/>
+
+            <TextView
+                    android:text="00"
+                    android:textSize="26dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:id="@+id/movieCount"/>
+            <TextView
+                    android:text="@string/movieCount"
+                    android:textSize="26dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:id="@+id/movieCountText"/>
+
+            <TextView
+                    android:text="00 Hours "
+                    android:textSize="26dp"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hoursWatched"
+            />
+
+            <TextView
+                    android:text="@string/hoursWatched"
+                    android:textSize="26dp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hoursWatchedText"
+            />
+
+            <TextView
+                    android:text="Charts Coming Soon  "
+                    android:textSize="26dp"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:padding="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chart"
+                    android:textColor="@color/colorAccent"
+
+            />
+
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

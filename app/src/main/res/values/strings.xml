@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MovieTracker</string>
 
-    /*Watch Item Strings*/
+    <!-- Watch item Strings-->
     <string name="button_addWatchitem">Add Watch Item</string>
     <string name="button_removeWatchitem">remove Watch Item</string>
 
@@ -20,7 +20,7 @@
     <string name="save_watchitem">Save Watch Item</string>
 
 
-    /*Watched Movie Strings*/
+    <!-- Watched Movie Strings-->
     <string name="hint_watchedTitle">Movie Title</string>
     <string name="hint_watchedComment">Movie Comment</string>
     <string name="hint_watchedRating">Movie Rating</string>
@@ -38,10 +38,11 @@
 
     <string name="save_watchedmovie">Save Watched Movie</string>
 
-    /*home Screen Strings*/
+    <!-- Home Page-->
     <string name="home_movies">Movies</string>
     <string name="home_watchlist">My Watchlist</string>
     <string name="home_watchedMovies">My Watched Movies</string>
+    <string name="home_Stats">My Statistics</string>
 
     <string name ="appDesc">Store Movies You are currently watching,
     View the most popular movies out right now and,
@@ -50,14 +51,14 @@
     </string>
     <string name ="appBanner">Welcome to My Movie Tracker</string>
 
+    <string name = "menu_back">Back</string>
 
-    /*movie Strings*/
-    <string name ="menu_cancelMovie">Cancel</string>
+    <!-- Movie Page -->
+   <string name ="menu_cancelMovie">Cancel</string>
+   <string name ="menu_reloadMovies">Relaod</string>
 
-
-
-
-
-
+   <!-- Statistic Page -->
+    <string name="movieCount">Movies Watched</string>
+    <string name="hoursWatched">Hours Watched</string>
 
 </resources>
