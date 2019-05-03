@@ -19,13 +19,13 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **@Michael Barcoe - barcoe98@gmail.com - StudentID : 20080330
-*(https://github.com/PurpleBooth)
+* @Michael Barcoe - barcoe98@gmail.com - StudentID : 20080330
+* (https://github.com/barcoe98)
 
 ## Acknowledgments
 
-*@Siobhan Drohan
-*@Rob O'Conor
-*The Movie Database API
+* @Siobhan Drohan
+* @Rob O'Conor
+* The Movie Database API
  
 
