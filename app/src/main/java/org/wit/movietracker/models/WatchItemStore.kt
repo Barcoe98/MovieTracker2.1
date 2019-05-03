@@ -6,4 +6,6 @@ interface WatchItemStore {
     fun create(watchItem: WatchItemModel)
     fun update(watchItem: WatchItemModel)
     fun remove(watchItem: WatchItemModel)
+    fun length(watchItem: WatchItemModel)
+
 }

@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import kotlinx.android.synthetic.main.new_watchitem.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
@@ -16,13 +17,10 @@ import org.jetbrains.anko.toast
 import org.wit.movietracker.R
 import org.wit.movietracker.main.MainApp
 import org.wit.movietracker.models.WatchItemModel
-import kotlinx.android.synthetic.main.new_watchedmovie.*
-import org.wit.movietracker.models.WatchedMovieModel
 
 class WatchItemActivity : AppCompatActivity(), AnkoLogger {
 
     var watchItem = WatchItemModel()
-
     lateinit var app: MainApp
     var edit = false
 
@@ -30,6 +28,7 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.new_watchitem)
         app = application as MainApp
+        btnAddToWatchedMovie.visibility= View.GONE
 
         if (intent.hasExtra("watchItem_edit"))
         {
@@ -37,30 +36,24 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
 
             watchItem = intent.extras.getParcelable<WatchItemModel>("watchItem_edit")
             watchitemTitle.setText(watchItem.title)
-            watchitemDesc.setText(watchItem.description)
+            watchitemLength.setText(watchItem.length)
             watchitemTime.setText(watchItem.time)
             btnAddWatchItem.setText(R.string.save_watchitem)
-
+            btnAddToWatchedMovie.visibility= View.VISIBLE
         }
-/*
-        btnAddWatchedMovie.setOnClickListener{
-            //app.watchitems.remove(watchItem)
-            startActivityForResult<WatchedMovieActivity>(0)
-            //app.watchitems.remove(watchItem)
-            //deleteCurrentWatchItem()
-        } */
+
 
         btnAddWatchItem.setOnClickListener {
 
             watchItem.title = watchitemTitle.text.toString()
-            watchItem.description = watchitemDesc.text.toString()
+            watchItem.length = watchitemLength.text.toString()
             watchItem.time = watchitemTime.text.toString()
 
             if (watchItem.title.isEmpty()) {
                 toast(R.string.enter_watchitem_title)
             }
-            else if (watchItem.description.isEmpty()) {
-                toast(R.string.enter_watchitem_desc)
+            else if (watchItem.length.isEmpty()) {
+                toast(R.string.enter_watchitem_length)
             }
             else if (watchItem.time.isEmpty()) {
                 toast(R.string.enter_watchitem_time)
@@ -76,6 +69,12 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
                 setResult(AppCompatActivity.RESULT_OK)
                 finish()
             }
+        }
+
+        btnAddToWatchedMovie.setOnClickListener{
+            startActivityForResult<WatchedMovieActivity>(0)
+            deleteCurrentWatchItem()
+           // fillDetailsIn()
         }
         //Add action bar and set title
         //toolbarAdd.title = title
@@ -102,6 +101,12 @@ class WatchItemActivity : AppCompatActivity(), AnkoLogger {
 
     fun deleteCurrentWatchItem(){
         app.watchitems.remove(watchItem)
+    }
+
+    fun fillDetailsIn(){
+        //var mTitle = findViewById(R.id.watchedMovieTitle)
+        //mTitle.setText(watchItem.title)
+
     }
 
 }

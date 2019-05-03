@@ -3,14 +3,6 @@ package org.wit.movietracker.models
 import com.google.gson.annotations.SerializedName
 import android.graphics.Movie
 
-
-interface OnGetMovieCallback {
-
-    fun onSuccess(movie: Movie)
-
-    fun onError()
-}
-
 data class MovieModel(
     @SerializedName("adult")
     val adult: Boolean,

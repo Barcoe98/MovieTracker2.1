@@ -19,6 +19,8 @@ class HomeActivity : AppCompatActivity(), AnkoLogger {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_screen)
 
+        //watchedMoviesCount.setText(Counter.counter)
+
         //when button clicked starts activity MovieListActivity
         btnMovies.setOnClickListener{
             startActivityForResult<MovieListActivity>(0)

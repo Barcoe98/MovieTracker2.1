@@ -45,8 +45,8 @@ class WatchedMovieJSONStore : WatchedMovieStore, AnkoLogger {
             foundWatchedMovie.watchedTitle = watchedMovie.watchedTitle
             foundWatchedMovie.watchedComment = watchedMovie.watchedComment
             foundWatchedMovie.watchedRating = watchedMovie.watchedRating
-            logAll()
         }
+        serialize()
     }
 
     override fun remove(watchedMovie: WatchedMovieModel) {
@@ -55,7 +55,7 @@ class WatchedMovieJSONStore : WatchedMovieStore, AnkoLogger {
     }
 
     override fun length(watchedMovie: WatchedMovieModel){
-        watchedMovies.size
+       watchedMovies.size
 
     }
 
@@ -67,9 +67,5 @@ class WatchedMovieJSONStore : WatchedMovieStore, AnkoLogger {
     private fun deserialize() {
         val jsonString2 = read(context, JSON_FILE2)
         watchedMovies = Gson().fromJson(jsonString2, listType2)
-    }
-
-    fun logAll() {
-        watchedMovies.forEach { info("${it}") }
     }
 }

@@ -45,7 +45,7 @@ class WatchItemJSONStore : WatchItemStore, AnkoLogger {
         var foundWatchitem: WatchItemModel? = watchitems.find { p -> p.id == watchitem.id }
         if (foundWatchitem != null) {
             foundWatchitem.title = watchitem.title
-            foundWatchitem.description = watchitem.description
+            foundWatchitem.length = watchitem.length
             foundWatchitem.time = watchitem.time
         }
         serialize()
@@ -54,6 +54,11 @@ class WatchItemJSONStore : WatchItemStore, AnkoLogger {
     override fun remove(watchitem: WatchItemModel) {
         watchitems.remove(watchitem)
         serialize()
+
+    }
+
+    override fun length(watchitem: WatchItemModel){
+        watchitems.size
 
     }
 
@@ -67,7 +72,4 @@ class WatchItemJSONStore : WatchItemStore, AnkoLogger {
         watchitems = Gson().fromJson(jsonString, listType)
     }
 
-    fun logAll() {
-        watchitems.forEach { info("${it}") }
-    }
 }

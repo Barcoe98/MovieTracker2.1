@@ -20,6 +20,8 @@ class WatchedMovieActivity : AppCompatActivity(), AnkoLogger {
     lateinit var app: MainApp
     var edit = false
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.new_watchedmovie)

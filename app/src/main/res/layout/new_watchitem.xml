@@ -52,11 +52,11 @@
                         android:textSize="14sp"/>
 
                 <android.support.design.widget.TextInputEditText
-                        android:id="@+id/watchitemDesc"
+                        android:id="@+id/watchitemLength"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:hint="@string/hint_watchitemDescription"
+                        android:hint="@string/hint_watchitemLength"
                         android:inputType="text"
                         android:maxLength="80"
                         android:maxLines="3"

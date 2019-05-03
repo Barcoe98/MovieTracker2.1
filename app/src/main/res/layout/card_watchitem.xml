@@ -20,17 +20,16 @@
                 android:text="Watch Item Title"/>
 
         <TextView
-                android:id="@+id/watchitemDescList"
+                android:id="@+id/watchitemLengthList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/watchitemTitleList"
-                android:text="Watch Item Desc"/>
+                android:text="Watch Item Length"/>
         <TextView
                 android:id="@+id/watchitemTimeList"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Time"
-                android:layout_alignBaseline="@id/watchitemDescList"
                 android:layout_marginLeft="330dp"/>
 
     </RelativeLayout>

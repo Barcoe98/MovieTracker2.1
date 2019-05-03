@@ -67,18 +67,7 @@
                     android:id="@+id/hoursWatchedText"
             />
 
-            <TextView
-                    android:text="Charts Coming Soon  "
-                    android:textSize="26dp"
-                    android:gravity="center"
-                    android:layout_margin="20dp"
-                    android:padding="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/chart"
-                    android:textColor="@color/colorAccent"
 
-            />
 
         </LinearLayout>
     </RelativeLayout>

@@ -6,7 +6,7 @@
     <string name="button_removeWatchitem">remove Watch Item</string>
 
     <string name="hint_watchitemTitle">Watch Item Title</string>
-    <string name="hint_watchitemDescription">Watch Item Description</string>
+    <string name="hint_watchitemLength">Watch Item Length</string>
     <string name="hint_watchitemTime">Watch Item Time</string>
 
     <string name="menu_addWatchitem">Add</string>
@@ -14,7 +14,7 @@
     <string name="menu_delete_watchitem">Delete</string>
 
     <string name="enter_watchitem_title">Please Enter A Title</string>
-    <string name="enter_watchitem_desc">Please Enter A Description</string>
+    <string name="enter_watchitem_length">Please Enter the Length of the movie</string>
     <string name="enter_watchitem_time">Please Enter A Time</string>
 
     <string name="save_watchitem">Save Watch Item</string>
